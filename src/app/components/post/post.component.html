@@ -1,0 +1,11 @@
+<div class="card mb-1">
+  <div class="card-body">
+    <h5 class="card-title text-bold">{{ post.title }}</h5>
+    <p class="card-text">{{ post.body }}</p>
+    <div class="text-right">
+
+      <button (click)="deletePost(post.id)" class="btn btn-primary text-white mr-1">Delete</button>
+      <button (click)="updatePost()" class="btn btn-primary text-white">Update</button>
+    </div>
+  </div>
+</div>

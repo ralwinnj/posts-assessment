@@ -1,0 +1,32 @@
+<div class="p-5">
+<div class="card my-5">
+  <div class="card-body">
+    <h5 class="card-title text-center">{{ title }}</h5>
+    <hr>
+    <form [formGroup]="postForm">
+      <div class="form-label-group">
+        <label for="inputTitle">Title</label>
+        <input formControlName="title" type="text" id="inputTitle" class="form-control" required autofocus>
+        <label class="text-danger" *ngIf="postForm.controls.title.errors?.required && postForm.controls.title.touched">
+          Title is Required!
+        </label>
+
+      </div>
+
+      <div class="form-label-group">
+        <label for="body">Body</label>
+        <textarea formControlName="body" type="text" id="body" class="form-control" required autofocus></textarea>
+        <label class="text-danger" *ngIf="postForm.controls.body.errors?.required && postForm.controls.body.touched">
+          Body is Required!
+        </label>
+
+      </div>
+
+      <button class="btn btn-lg btn-primary btn-block text-uppercase mt-3" type="submit" (click)="submitForm();">
+        Submit
+      </button>
+
+    </form>
+  </div>
+</div>
+</div>
